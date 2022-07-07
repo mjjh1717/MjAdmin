@@ -1,4 +1,5 @@
-// 包装类 让node环境也可以使用我们定义的环境变量
+const httpsReg = /^https:\/\//
+
 export function wrapperEnv(envOptions) {
   if (!envOptions) return {}
   const rst = {}
@@ -27,10 +28,6 @@ export function wrapperEnv(envOptions) {
   }
   return rst
 }
-
-const httpsReg = /^https:\/\//
-
-// ...
 
 export function createProxy(list = []) {
   const rst = {}
